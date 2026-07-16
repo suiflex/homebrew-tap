@@ -1,40 +1,43 @@
 # homebrew-tap
 
-Homebrew tap for [RDBS](https://github.com/suiflex/rdb) — a native, cross-platform
+Homebrew tap for [RDB](https://github.com/suiflex/rdb) — a native, cross-platform
 database manager (PostgreSQL, MySQL, Redis, MongoDB, SQLite, Cassandra).
 
 Supports macOS (Apple Silicon + Intel) and Linux.
 
+> Formerly published as `rdbs`. The old formula has been removed — install `rdb`
+> instead. If you previously installed `rdbs`, run `brew uninstall rdbs` first.
+
 ## Install
 
 ```bash
-brew install suiflex/tap/rdbs
+brew install suiflex/tap/rdb
 ```
 
 Or add the tap first, then install:
 
 ```bash
 brew tap suiflex/tap
-brew install rdbs
+brew install rdb
 ```
 
 ## Upgrade
 
 ```bash
 brew update
-brew upgrade rdbs
+brew upgrade rdb
 ```
 
 ## Uninstall
 
 ```bash
-brew uninstall rdbs
+brew uninstall rdb
 ```
 
 ## How it works
 
-`Formula/rdbs.rb` is generated automatically on every RDBS release by the
+`Formula/rdb.rb` is generated automatically on every RDB release by the
 [`release-build`](https://github.com/suiflex/rdb/blob/develop/.github/workflows/release-build.yml)
 workflow, which downloads the release tarballs, computes their SHA-256, and
-pushes an updated formula here. Do not hand-edit `Formula/rdbs.rb` — changes
+pushes an updated formula here. Do not hand-edit `Formula/rdb.rb` — changes
 are overwritten on the next release.
