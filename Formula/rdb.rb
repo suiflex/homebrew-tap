@@ -1,26 +1,26 @@
 # Rendered by .github/workflows/release-build.yml into suiflex/homebrew-tap.
-# Placeholders (0.35.0, https://github.com/suiflex/rdb/releases/download/v0.35.0, e563285dfecfad39ec93a0844dce1ec749c944a9000344c1ef5a199f5a3bf843, 08fe1e4c5232ff9abfe963b3940aa7db047b7ba85f1811530ad3e83aa0e2b798, 959fc8f86a5e05cace6ca162a6b37935effb6e3883a9d8316cebe34f742af674) are
+# Placeholders (0.36.0, https://github.com/suiflex/rdb/releases/download/v0.36.0, c14cd397beb2221192f7d123becfff90ae9fae23166ef29b6a61fab3a25372cb, ff9f76ca07d33e141274815044a67557b72f6ecbac97b8a3580657d7df7dbb89, aa457aca1277fb733b8e6f41a76a6ca1b4bbfe32ea49dde4465c42fcaaf84ab0) are
 # filled in via sed on each release. Edit the template, not the generated file.
 class Rdb < Formula
   desc "Native cross-platform database manager (PostgreSQL, MySQL, Redis, MongoDB)"
   homepage "https://github.com/suiflex/rdb"
-  version "0.35.0"
+  version "0.36.0"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/suiflex/rdb/releases/download/v0.35.0/rdb-aarch64-apple-darwin.tar.gz"
-      sha256 "e563285dfecfad39ec93a0844dce1ec749c944a9000344c1ef5a199f5a3bf843"
+      url "https://github.com/suiflex/rdb/releases/download/v0.36.0/rdb-aarch64-apple-darwin.tar.gz"
+      sha256 "c14cd397beb2221192f7d123becfff90ae9fae23166ef29b6a61fab3a25372cb"
     end
     on_intel do
-      url "https://github.com/suiflex/rdb/releases/download/v0.35.0/rdb-x86_64-apple-darwin.tar.gz"
-      sha256 "08fe1e4c5232ff9abfe963b3940aa7db047b7ba85f1811530ad3e83aa0e2b798"
+      url "https://github.com/suiflex/rdb/releases/download/v0.36.0/rdb-x86_64-apple-darwin.tar.gz"
+      sha256 "ff9f76ca07d33e141274815044a67557b72f6ecbac97b8a3580657d7df7dbb89"
     end
   end
 
   on_linux do
-    url "https://github.com/suiflex/rdb/releases/download/v0.35.0/rdb-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "959fc8f86a5e05cace6ca162a6b37935effb6e3883a9d8316cebe34f742af674"
+    url "https://github.com/suiflex/rdb/releases/download/v0.36.0/rdb-x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "aa457aca1277fb733b8e6f41a76a6ca1b4bbfe32ea49dde4465c42fcaaf84ab0"
   end
 
   def install
