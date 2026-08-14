@@ -1,26 +1,26 @@
 # Rendered by .github/workflows/release-build.yml into suiflex/homebrew-tap.
-# Placeholders (0.37.0, https://github.com/suiflex/rdb/releases/download/v0.37.0, 8e912e6698ba83eb221852dff466d12f0480ca10213c189256ee2d83f228fe93, 267534aff3065962c86565edb6df186dafadfee54a37589afaa07606da067222, eae6b1c0edf3de1c2f40edf23601dfeb844631c56ef14eb4ea914c16789338a2) are
+# Placeholders (0.38.0, https://github.com/suiflex/rdb/releases/download/v0.38.0, 5458a176f73012796128f737317ca60c71156685af847ed6e160780f9b0f3b50, 3c84f4125f0152968409bc67a237e8d69e8feb3afeb3ad3b6441679f9e230a40, ec8bbe3a6c3f8f19ac75e8bba97c5da13bc1988c19472774b246453ce699ae25) are
 # filled in via sed on each release. Edit the template, not the generated file.
 class Rdb < Formula
   desc "Native cross-platform database manager (PostgreSQL, MySQL, Redis, MongoDB)"
   homepage "https://github.com/suiflex/rdb"
-  version "0.37.0"
-  license "MIT"
+  version "0.38.0"
+  license "Apache-2.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/suiflex/rdb/releases/download/v0.37.0/rdb-aarch64-apple-darwin.tar.gz"
-      sha256 "8e912e6698ba83eb221852dff466d12f0480ca10213c189256ee2d83f228fe93"
+      url "https://github.com/suiflex/rdb/releases/download/v0.38.0/rdb-aarch64-apple-darwin.tar.gz"
+      sha256 "5458a176f73012796128f737317ca60c71156685af847ed6e160780f9b0f3b50"
     end
     on_intel do
-      url "https://github.com/suiflex/rdb/releases/download/v0.37.0/rdb-x86_64-apple-darwin.tar.gz"
-      sha256 "267534aff3065962c86565edb6df186dafadfee54a37589afaa07606da067222"
+      url "https://github.com/suiflex/rdb/releases/download/v0.38.0/rdb-x86_64-apple-darwin.tar.gz"
+      sha256 "3c84f4125f0152968409bc67a237e8d69e8feb3afeb3ad3b6441679f9e230a40"
     end
   end
 
   on_linux do
-    url "https://github.com/suiflex/rdb/releases/download/v0.37.0/rdb-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "eae6b1c0edf3de1c2f40edf23601dfeb844631c56ef14eb4ea914c16789338a2"
+    url "https://github.com/suiflex/rdb/releases/download/v0.38.0/rdb-x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "ec8bbe3a6c3f8f19ac75e8bba97c5da13bc1988c19472774b246453ce699ae25"
   end
 
   def install
