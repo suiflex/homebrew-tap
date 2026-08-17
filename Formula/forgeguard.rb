@@ -8,28 +8,28 @@
 class Forgeguard < Formula
   desc "Token-efficient, language-agnostic engineering guardrails for AI coding agents"
   homepage "https://github.com/suiflex/ForgeGuard"
-  version "0.12.0"
+  version "0.13.0"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/suiflex/ForgeGuard/releases/download/v0.12.0/forgeguard-macos-aarch64.tar.gz"
-      sha256 "808b0f315e38b3400c1dbc7508dfe849bf471ca6a6eab8b0506954ee787a0123"
+      url "https://github.com/suiflex/ForgeGuard/releases/download/v0.13.0/forgeguard-macos-aarch64.tar.gz"
+      sha256 "05e936a922655a2237591c8802bb90240592d43a8bee9d1ff22d8e2afd6b7256"
     end
     on_intel do
-      url "https://github.com/suiflex/ForgeGuard/releases/download/v0.12.0/forgeguard-macos-x86_64.tar.gz"
-      sha256 "37f16038945c3457c2da0275f3ff88fc389bfd91d1a069ea961736425fc0820d"
+      url "https://github.com/suiflex/ForgeGuard/releases/download/v0.13.0/forgeguard-macos-x86_64.tar.gz"
+      sha256 "f76f3f908729034bda2aa03196f1f5d91d62b3bc3df28fe242f1ebafe6f12ec4"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/suiflex/ForgeGuard/releases/download/v0.12.0/forgeguard-linux-aarch64.tar.gz"
-      sha256 "3800710ee522f35fce7193bc8323ea4f42f4701beda7af343417dbd9809266e8"
+      url "https://github.com/suiflex/ForgeGuard/releases/download/v0.13.0/forgeguard-linux-aarch64.tar.gz"
+      sha256 "6444a3951159c7c6ffd51a5723e606f86de62ef81184dd5a95e0b9119fbe9de0"
     end
     on_intel do
-      url "https://github.com/suiflex/ForgeGuard/releases/download/v0.12.0/forgeguard-linux-x86_64.tar.gz"
-      sha256 "c1bedf1ebc6560347768fcc24451ea2b0b0bbca3408deff580fe2a43145907f3"
+      url "https://github.com/suiflex/ForgeGuard/releases/download/v0.13.0/forgeguard-linux-x86_64.tar.gz"
+      sha256 "dff3746b61e0cc5ec785d36276d784ace953120c9014f5fc633ca3a9ddcf58b0"
     end
   end
 
