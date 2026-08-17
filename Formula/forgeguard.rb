@@ -14,22 +14,22 @@ class Forgeguard < Formula
   on_macos do
     on_arm do
       url "https://github.com/suiflex/ForgeGuard/releases/download/v0.12.0/forgeguard-macos-aarch64.tar.gz"
-      sha256 "474b83362acaab9956e1883c9c914bf69153c1b7d71ab767b2f28e7d125a749d"
+      sha256 "808b0f315e38b3400c1dbc7508dfe849bf471ca6a6eab8b0506954ee787a0123"
     end
     on_intel do
       url "https://github.com/suiflex/ForgeGuard/releases/download/v0.12.0/forgeguard-macos-x86_64.tar.gz"
-      sha256 "170c134dff562bee1b88126434bc62fda3a00dee53642d9e473b7500ca3f69d9"
+      sha256 "37f16038945c3457c2da0275f3ff88fc389bfd91d1a069ea961736425fc0820d"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/suiflex/ForgeGuard/releases/download/v0.12.0/forgeguard-linux-aarch64.tar.gz"
-      sha256 "ae8a5ba12dfa496bc67c42d7ee329fd300566f4007f907c6503f21e10f34cdf4"
+      sha256 "3800710ee522f35fce7193bc8323ea4f42f4701beda7af343417dbd9809266e8"
     end
     on_intel do
       url "https://github.com/suiflex/ForgeGuard/releases/download/v0.12.0/forgeguard-linux-x86_64.tar.gz"
-      sha256 "d6cbb8681d7bcd194b68ca486f47608a82e25d6247d29be39d5b606d51ca05e7"
+      sha256 "c1bedf1ebc6560347768fcc24451ea2b0b0bbca3408deff580fe2a43145907f3"
     end
   end
 
