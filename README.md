@@ -15,6 +15,9 @@
 | <img src="assets/rdb-mark.svg" width="28"> | **rdb** (formula) | Native, cross-platform database manager (CLI) | `brew install suiflex/tap/rdb` |
 | <img src="assets/rdb-mark.svg" width="28"> | **rdb** (cask) | RDB.app GUI, installed into /Applications | `brew install --cask suiflex/tap/rdb` |
 | <img src="assets/websift-logo.png" width="28"> | **websift** | Bounded web search, research, mapping, scraping, and crawling over MCP | `brew install suiflex/tap/websift` |
+| <img src="assets/suitest-mark.svg" width="28"> | **suitest** | Local dashboard, SQLite, and MCP server for QA testing — one command | `brew install suiflex/tap/suitest` |
+| <img src="assets/suitest-mark.svg" width="28"> | **suitest-mcp** | MCP server for IDE agents — generate, run, and publish QA tests | `brew install suiflex/tap/suitest-mcp` |
+| <img src="assets/forgeguard-mark.svg" width="28"> | **forgeguard** | Token-efficient, language-agnostic engineering guardrails for AI coding agents | `brew install suiflex/tap/forgeguard` |
 
 Or add the tap once, then install by short name:
 
@@ -22,6 +25,9 @@ Or add the tap once, then install by short name:
 brew tap suiflex/tap
 brew install rdb
 brew install websift
+brew install suitest
+brew install suitest-mcp
+brew install forgeguard
 ```
 
 ## Package details
@@ -100,11 +106,64 @@ brew uninstall websift
 The CLI has no `--version` flag; it accepts `mcp`, `status`, `setup`, `doctor`,
 and `update`. Verify the install with:
 
+
 ```bash
 websift status
 ```
 
 </details>
+
+<details>
+<summary><strong>Suitest</strong> — dashboard, SQLite, and MCP for QA testing</summary>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/suitest-logo-dark.svg">
+    <img src="assets/suitest-logo-light.svg" alt="Suitest" width="280">
+  </picture>
+</p>
+
+Suitest is a local QA testing bundle. Repository:
+[suiflex/suitest](https://github.com/suiflex/suitest).
+
+Two components are published to the tap:
+
+```bash
+# Local dashboard, SQLite, and MCP server — one command
+brew install suiflex/tap/suitest
+
+# MCP server for IDE agents — generate, run, and publish QA tests
+brew install suiflex/tap/suitest-mcp
+```
+
+Both require `node` and `uv`. `suitest`'s `lib/venv.js` provisions the Python
+3.12 runtime and installs bundled wheels into a managed venv on first boot;
+`suitest-mcp`'s `lib/python.js` takes a system `python3` when one is available
+and otherwise provisions an interpreter through `uv`.
+
+</details>
+
+
+<details>
+<summary><strong>ForgeGuard</strong> — engineering guardrails for AI coding agents</summary>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/forgeguard-logo-dark.svg">
+    <img src="assets/forgeguard-logo-light.svg" alt="ForgeGuard" width="280">
+  </picture>
+</p>
+
+Token-efficient, language-agnostic engineering guardrails for AI coding agents.
+Repository: [suiflex/ForgeGuard](https://github.com/suiflex/ForgeGuard).
+
+```bash
+brew install suiflex/tap/forgeguard
+```
+
+</details>
+
+
 
 ## How it works
 
@@ -115,6 +174,9 @@ the tool's own repository — never hand-edited here:
 |---|---|
 | `Formula/rdb.rb`, `Casks/rdb.rb` | [`release-build.yml`](https://github.com/suiflex/rdb/blob/develop/.github/workflows/release-build.yml) in `suiflex/rdb` |
 | `Formula/websift.rb` | [`release.yml`](https://github.com/suiflex/websift/blob/develop/.github/workflows/release.yml) in `suiflex/websift` |
+| `Formula/suitest.rb` | [`release-launcher.yml`](https://github.com/suiflex/suitest/blob/main/.github/workflows/release-launcher.yml) in `suiflex/suitest` |
+| `Formula/suitest-mcp.rb` | [`release-mcp.yml`](https://github.com/suiflex/suitest/blob/main/.github/workflows/release-mcp.yml) in `suiflex/suitest` |
+| `Formula/forgeguard.rb` | [`release.yml`](https://github.com/suiflex/ForgeGuard/blob/main/.github/workflows/release.yml) in `suiflex/ForgeGuard` |
 
 Each workflow downloads the published release artifacts, computes their
 SHA-256, renders the template, and pushes the result here. **Do not hand-edit
