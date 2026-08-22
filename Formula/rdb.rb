@@ -1,6 +1,13 @@
 # Rendered by .github/workflows/release-build.yml into suiflex/homebrew-tap.
-# Placeholders (0.40.0, https://github.com/suiflex/rdb/releases/download/v0.40.0, 6f745b4848d509d59051d436d58f43ec44389a5980a9cd37913d6401cf1be575) are filled in via sed on each
+# Placeholders (0.41.0, https://github.com/suiflex/rdb/releases/download/v0.41.0, 46817be404de0a9b36b7b653e05133f7e2392216cf74ff487930f80f57b52a82) are filled in via sed on each
 # release. Edit the template, not the generated file.
+#
+# The arm64 stanza carries its own placeholder and a trailing marker comment.
+# That leg of the build is best-effort (continue-on-error), so the asset may be
+# absent: the workflow strips the marker when it exists and deletes those lines
+# outright when it does not. The arm64 placeholder is deliberately not spelled
+# out above, because the delete path leaves no sed rule to substitute it and a
+# leftover placeholder in this comment would (rightly) fail the render check.
 #
 # Linux only. RDB is a GUI app, so macOS installs go through the `rdb` cask
 # (rdb-cask.rb.tmpl), which drops RDB.app into /Applications. Homebrew resolves
@@ -9,13 +16,27 @@
 class Rdb < Formula
   desc "Native cross-platform database manager (PostgreSQL, MySQL, Redis, MongoDB)"
   homepage "https://github.com/suiflex/rdb"
-  version "0.40.0"
+  version "0.41.0"
   license "Apache-2.0"
 
   depends_on :linux
 
-  url "https://github.com/suiflex/rdb/releases/download/v0.40.0/rdb-x86_64-unknown-linux-gnu.tar.gz"
-  sha256 "6f745b4848d509d59051d436d58f43ec44389a5980a9cd37913d6401cf1be575"
+  # x86_64 stays the unconditional default and arm64 overrides it, rather than
+  # both living in arch blocks. If the best-effort arm64 leg produced nothing,
+  # the override lines are deleted and this formula falls back to exactly the
+  # x86_64-only shape it had before — whereas an arch-block pair with the arm64
+  # half missing leaves an arm machine with no url at all, which Homebrew
+  # rejects at *load* time ("formula requires at least a URL"), breaking more
+  # than just the install.
+  url "https://github.com/suiflex/rdb/releases/download/v0.41.0/rdb-x86_64-unknown-linux-gnu.tar.gz"
+  sha256 "46817be404de0a9b36b7b653e05133f7e2392216cf74ff487930f80f57b52a82"
+
+  # Without this override every Linux user got the x86_64 tarball, so an arm64
+  # machine silently installed a binary it cannot run.
+  on_arm do
+    url "https://github.com/suiflex/rdb/releases/download/v0.41.0/rdb-aarch64-unknown-linux-gnu.tar.gz"
+    sha256 "0bc734cfc4b13c72cde3e2bdbddd799902aaf17fc58ed7ef4a7b3c1e0fcba814"
+  end
 
   def install
     bin.install "rdb"
