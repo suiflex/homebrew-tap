@@ -1,19 +1,19 @@
 # Rendered by .github/workflows/release-build.yml into suiflex/homebrew-tap.
-# Placeholders (0.42.0, https://github.com/suiflex/rdb/releases/download/v0.42.0, 5b9002858f03d0a32bd4b5f4d3b0df055f1a31f3fd6a5beb2db0ff084abe9420, 1e5ba46845ea648fd37065c1eae57f0036c74f45711d2b7f3ca28bf92dc9b79a) are filled in
+# Placeholders (0.43.0, https://github.com/suiflex/rdb/releases/download/v0.43.0, 7790ada5d7469e6ee015b425c08dc5eaaf6c5ee9a59ce0d5a193f135df7473e2, d6b30ceadf9bcf2000810d4aabe4403d22ded29d41cc7d82c68540314a6bf372) are filled in
 # via sed on each release. Edit the template, not the generated file.
 #
 # This cask installs the RDB.app GUI (from the release .dmg) into Applications.
 # The CLI-only binary is the separate `rdb` formula.
 cask "rdb" do
-  version "0.42.0"
+  version "0.43.0"
 
   on_arm do
-    sha256 "5b9002858f03d0a32bd4b5f4d3b0df055f1a31f3fd6a5beb2db0ff084abe9420"
-    url "https://github.com/suiflex/rdb/releases/download/v0.42.0/rdb-aarch64-apple-darwin.dmg"
+    sha256 "7790ada5d7469e6ee015b425c08dc5eaaf6c5ee9a59ce0d5a193f135df7473e2"
+    url "https://github.com/suiflex/rdb/releases/download/v0.43.0/rdb-aarch64-apple-darwin.dmg"
   end
   on_intel do
-    sha256 "1e5ba46845ea648fd37065c1eae57f0036c74f45711d2b7f3ca28bf92dc9b79a"
-    url "https://github.com/suiflex/rdb/releases/download/v0.42.0/rdb-x86_64-apple-darwin.dmg"
+    sha256 "d6b30ceadf9bcf2000810d4aabe4403d22ded29d41cc7d82c68540314a6bf372"
+    url "https://github.com/suiflex/rdb/releases/download/v0.43.0/rdb-x86_64-apple-darwin.dmg"
   end
 
   name "RDB"
