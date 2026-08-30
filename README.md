@@ -15,6 +15,7 @@
 | <img src="assets/rdb-mark.svg" width="28"> | **rdb** (formula) | Native, cross-platform database manager (CLI) | `brew install suiflex/tap/rdb` |
 | <img src="assets/rdb-mark.svg" width="28"> | **rdb** (cask) | RDB.app GUI, installed into /Applications | `brew install --cask suiflex/tap/rdb` |
 | <img src="assets/websift-logo.png" width="28"> | **websift** | Bounded web search, research, mapping, scraping, and crawling over MCP | `brew install suiflex/tap/websift` |
+| <img src="assets/suitest-mark.svg" width="28"> | **suitest-mcp** | MCP server for IDE agents — generate, run, and publish QA tests | `brew install suiflex/tap/suitest-mcp` |
 | <img src="assets/safehell-mark.svg" width="28"> | **safehell** | Approval-gated SSH broker for AI coding agents | `brew install suiflex/tap/safehell` |
 | <img src="assets/forgeguard-mark.svg" width="28"> | **forgeguard** | Token-efficient, language-agnostic engineering guardrails for AI coding agents | `brew install suiflex/tap/forgeguard` |
 
