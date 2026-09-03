@@ -1,11 +1,11 @@
 # Rendered by .github/workflows/release-mcp.yml into suiflex/homebrew-tap.
-# Placeholders (0.8.1, https://github.com/suiflex/suitest/releases/download/mcp-v0.8.1, f126d418304206ff3d0969a1ae9ce7165468a5f2fa2f4846762915406c2962d0) are filled in via sed on each release.
+# Placeholders (0.9.0, https://github.com/suiflex/suitest/releases/download/mcp-v0.9.0, ba3f71e82e7695dabfa42222fa4d18ee281d81f375177e9c502e38c092243856) are filled in via sed on each release.
 # Edit the template, not the generated file.
 class SuitestMcp < Formula
   desc "Suitest MCP server for IDE agents - generate, run, and publish QA tests"
   homepage "https://github.com/suiflex/suitest"
-  url "https://github.com/suiflex/suitest/releases/download/mcp-v0.8.1/suitest-mcp-0.8.1.tar.gz"
-  sha256 "f126d418304206ff3d0969a1ae9ce7165468a5f2fa2f4846762915406c2962d0"
+  url "https://github.com/suiflex/suitest/releases/download/mcp-v0.9.0/suitest-mcp-0.9.0.tar.gz"
+  sha256 "ba3f71e82e7695dabfa42222fa4d18ee281d81f375177e9c502e38c092243856"
   license "Apache-2.0"
 
   depends_on "node"
