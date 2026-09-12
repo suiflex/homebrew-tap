@@ -17,6 +17,7 @@
 | <img src="assets/websift-logo.png" width="28"> | **websift** | Bounded web search, research, mapping, scraping, and crawling over MCP | `brew install suiflex/tap/websift` |
 | <img src="assets/safehell-mark.svg" width="28"> | **safehell** | Approval-gated SSH broker for AI coding agents | `brew install suiflex/tap/safehell` |
 | <img src="assets/forgeguard-mark.svg" width="28"> | **forgeguard** | Token-efficient, language-agnostic engineering guardrails for AI coding agents | `brew install suiflex/tap/forgeguard` |
+| <img src="assets/fluxguard-mark.svg" width="28"> | **fluxguard** | Provider-agnostic resource awareness layer for AI coding agents | `brew install suiflex/tap/fluxguard` |
 
 Or add the tap once, then install by short name:
 
@@ -27,6 +28,7 @@ brew install websift
 brew install suitest-mcp
 brew install forgeguard
 brew install safehell
+brew install fluxguard
 ```
 
 ## Package details
@@ -185,6 +187,34 @@ brew install suiflex/tap/forgeguard
 </details>
 
 
+<details>
+<summary><strong>FluxGuard</strong> — provider-agnostic resource awareness layer for AI coding agents</summary>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/fluxguard-logo-dark.svg">
+    <img src="assets/fluxguard-logo-light.svg" alt="FluxGuard" width="280">
+  </picture>
+</p>
+
+Provider-agnostic resource awareness layer for AI coding agents: measures quota,
+context window, request rate limits, and budget flow (flux), returning concise
+execution advice so agents make cost-effective decisions and avoid unexpected
+quota exhaustion. Repository: [suiflex/FluxGuard](https://github.com/suiflex/FluxGuard).
+
+```bash
+brew install suiflex/tap/fluxguard
+```
+
+Verify the install with:
+
+```bash
+fluxguard --version
+```
+
+</details>
+
+
 
 ## How it works
 
@@ -198,6 +228,7 @@ the tool's own repository — never hand-edited here:
 | `Formula/safehell.rb` | [`release-build.yml`](https://github.com/suiflex/SafeHell/blob/develop/.github/workflows/release-build.yml) in `suiflex/SafeHell` |
 | `Formula/suitest-mcp.rb` | [`release-mcp.yml`](https://github.com/suiflex/suitest/blob/main/.github/workflows/release-mcp.yml) in `suiflex/suitest` |
 | `Formula/forgeguard.rb` | [`release.yml`](https://github.com/suiflex/ForgeGuard/blob/main/.github/workflows/release.yml) in `suiflex/ForgeGuard` |
+| `Formula/fluxguard.rb` | [`release-build.yml`](https://github.com/suiflex/FluxGuard/blob/develop/.github/workflows/release-build.yml) in `suiflex/FluxGuard` |
 
 Each workflow downloads the published release artifacts, computes their
 SHA-256, renders the template, and pushes the result here. **Do not hand-edit
