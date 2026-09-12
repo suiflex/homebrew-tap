@@ -10,28 +10,28 @@
 class Fluxguard < Formula
   desc "Provider-agnostic resource awareness layer for AI coding agents"
   homepage "https://github.com/suiflex/FluxGuard"
-  version "0.1.2"
+  version "0.1.3"
   license "Apache-2.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/suiflex/FluxGuard/releases/download/v0.1.2/fluxguard-macos-aarch64.tar.gz"
-      sha256 "be2b87d27cee4a7147f14cbc71644181bad03cd53eea84267d87aac1901caad5"
+      url "https://github.com/suiflex/FluxGuard/releases/download/v0.1.3/fluxguard-macos-aarch64.tar.gz"
+      sha256 "ecf848999384b853ff40fc4d6ccedf56c59af1e5af469104004b9f920989b7cc"
     end
     on_intel do
-      url "https://github.com/suiflex/FluxGuard/releases/download/v0.1.2/fluxguard-macos-x86_64.tar.gz"
-      sha256 "a72e5c28e47c889d584ab2d364183f9639fbad609939f13004bef8b755ca51e4"
+      url "https://github.com/suiflex/FluxGuard/releases/download/v0.1.3/fluxguard-macos-x86_64.tar.gz"
+      sha256 "f09e99d2e84388a32857218e90f63bffee1b57130fd169a249acb369233359ae"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/suiflex/FluxGuard/releases/download/v0.1.2/fluxguard-linux-aarch64.tar.gz"
-      sha256 "d358c55215739dd83bdde85bb26e874bd3b921c4dfdda383c483aff95a2f7dd1"
+      url "https://github.com/suiflex/FluxGuard/releases/download/v0.1.3/fluxguard-linux-aarch64.tar.gz"
+      sha256 "6fa71677b38228f32edaa925bee5cdbdf1fa4bf2dc30cdf54c44d0c16ff44460"
     end
     on_intel do
-      url "https://github.com/suiflex/FluxGuard/releases/download/v0.1.2/fluxguard-linux-x86_64.tar.gz"
-      sha256 "aa6183f32b9c208f423a1dc0d2e24ab86e883fa26f0e58e88d0d5b329d808f98"
+      url "https://github.com/suiflex/FluxGuard/releases/download/v0.1.3/fluxguard-linux-x86_64.tar.gz"
+      sha256 "834acc1798de113b8c95516bd546cf44d8a55904d8c6795f245d057f2ace3c53"
     end
   end
 
