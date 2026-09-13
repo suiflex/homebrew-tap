@@ -18,6 +18,7 @@
 | <img src="assets/safehell-mark.svg" width="28"> | **safehell** | Approval-gated SSH broker for AI coding agents | `brew install suiflex/tap/safehell` |
 | <img src="assets/forgeguard-mark.svg" width="28"> | **forgeguard** | Token-efficient, language-agnostic engineering guardrails for AI coding agents | `brew install suiflex/tap/forgeguard` |
 | <img src="assets/fluxguard-mark.svg" width="28"> | **fluxguard** | Provider-agnostic resource awareness layer for AI coding agents | `brew install suiflex/tap/fluxguard` |
+| <img src="assets/kurir-mark.svg" width="28"> | **kurir** | Portable MCP server registration and harness integration toolkit | `brew install suiflex/tap/kurir` |
 
 Or add the tap once, then install by short name:
 
@@ -29,6 +30,7 @@ brew install suitest-mcp
 brew install forgeguard
 brew install safehell
 brew install fluxguard
+brew install kurir
 ```
 
 ## Package details
@@ -215,6 +217,46 @@ fluxguard --version
 </details>
 
 
+<details>
+<summary><strong>Kurir</strong> — portable MCP server registration and harness integration toolkit</summary>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/kurir-logo-dark.svg">
+    <img src="assets/kurir-logo-light.svg" alt="Kurir" width="280">
+  </picture>
+</p>
+
+Register any MCP server with agent harnesses through one portable CLI and
+library: Claude Code, Claude Desktop, Cursor, VS Code, Gemini CLI, OpenCode,
+Windsurf, Zed, and more. Repository: [suiflex/kurir](https://github.com/suiflex/kurir).
+
+```bash
+brew install suiflex/tap/kurir
+```
+
+Upgrade:
+
+```bash
+brew update
+brew upgrade kurir
+```
+
+Uninstall:
+
+```bash
+brew uninstall kurir
+```
+
+Verify the install with:
+
+```bash
+kurir --version
+```
+
+</details>
+
+
 
 ## How it works
 
@@ -229,6 +271,7 @@ the tool's own repository — never hand-edited here:
 | `Formula/suitest-mcp.rb` | [`release-mcp.yml`](https://github.com/suiflex/suitest/blob/main/.github/workflows/release-mcp.yml) in `suiflex/suitest` |
 | `Formula/forgeguard.rb` | [`release.yml`](https://github.com/suiflex/ForgeGuard/blob/main/.github/workflows/release.yml) in `suiflex/ForgeGuard` |
 | `Formula/fluxguard.rb` | [`release-build.yml`](https://github.com/suiflex/FluxGuard/blob/develop/.github/workflows/release-build.yml) in `suiflex/FluxGuard` |
+| `Formula/kurir.rb` | [`release.yml`](https://github.com/suiflex/kurir/blob/main/.github/workflows/release.yml) in `suiflex/kurir` |
 
 Each workflow downloads the published release artifacts, computes their
 SHA-256, renders the template, and pushes the result here. **Do not hand-edit
