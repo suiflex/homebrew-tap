@@ -14,18 +14,18 @@ class ArsyCode < Formula
   on_macos do
     on_arm do
       url "https://github.com/suiflex/arsy-code/releases/download/v0.1.2/arsy-macos-aarch64.tar.gz"
-      sha256 "46f0042c2b167350270513476bcd3a826697aa050f806ef80fd242f5d89a9e38"
+      sha256 "0041bd13cee28b8faae13d76d336ed69c52d10641c46b61c91b0b82ff6745fe9"
     end
     on_intel do
       url "https://github.com/suiflex/arsy-code/releases/download/v0.1.2/arsy-macos-x86_64.tar.gz"
-      sha256 "9711fdfeb2d05bbd0befe0cf22f5cb627e88782e50c24d705192fecebb589b1c"
+      sha256 "6424d0326203f19c60e97e4ebd32683957df5c316231acc0ed4000a791feb557"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/suiflex/arsy-code/releases/download/v0.1.2/arsy-linux-aarch64.tar.gz"
-      sha256 "a57e1e2872d12689c842f4ba6b926f3bfc0f86739263d120d41d56834ae25356"
+      sha256 "61653e225d38d5bba2747688a9a82f2289777bf880c0f5239f3e48d795921e8f"
     end
     on_intel do
       url "https://github.com/suiflex/arsy-code/releases/download/v0.1.2/arsy-linux-x86_64.tar.gz"
