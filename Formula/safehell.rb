@@ -10,28 +10,28 @@
 class Safehell < Formula
   desc "Approval-gated SSH broker for AI coding agents"
   homepage "https://github.com/suiflex/SafeHell"
-  version "0.6.0"
+  version "0.6.1"
   license "Apache-2.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/suiflex/SafeHell/releases/download/v0.6.0/safehell-macos-aarch64.tar.gz"
-      sha256 "9cf70710fd5ecf7c8e10f94d371c433cda94a53f2c995801636d93118a3f63c9"
+      url "https://github.com/suiflex/SafeHell/releases/download/v0.6.1/safehell-macos-aarch64.tar.gz"
+      sha256 "092738179da4a01d1884f074109a780c29be7b1d44b41a0a1901123aeb3d05e1"
     end
     on_intel do
-      url "https://github.com/suiflex/SafeHell/releases/download/v0.6.0/safehell-macos-x86_64.tar.gz"
-      sha256 "258eb6021cf069c4c514080cf8e18e9127b90d12a6a4a97b8b2bff5d54a7e8ab"
+      url "https://github.com/suiflex/SafeHell/releases/download/v0.6.1/safehell-macos-x86_64.tar.gz"
+      sha256 "a87a121a6b56e69a3c3efc97caa304076d063960dc42332baaaa9a7ebfadc970"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/suiflex/SafeHell/releases/download/v0.6.0/safehell-linux-aarch64.tar.gz"
-      sha256 "9e33b9fc8d677d44f37799fcfd77d24550b97b50debf08bce10e2e8ed2186fe0"
+      url "https://github.com/suiflex/SafeHell/releases/download/v0.6.1/safehell-linux-aarch64.tar.gz"
+      sha256 "9be7fbb05f7c736d819fb0efffbce76faec2ed86d516fdbc268c2cc893d86a96"
     end
     on_intel do
-      url "https://github.com/suiflex/SafeHell/releases/download/v0.6.0/safehell-linux-x86_64.tar.gz"
-      sha256 "c0e707d7f82001d68562effedaab94bed91cb30f9f7b97cbfac66506e3cd7771"
+      url "https://github.com/suiflex/SafeHell/releases/download/v0.6.1/safehell-linux-x86_64.tar.gz"
+      sha256 "5f3b03d9e43b290e506e3fb64237b0960bce1c5537528b3f45aaf66ee06e3d90"
     end
   end
 
