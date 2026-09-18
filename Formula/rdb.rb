@@ -1,5 +1,5 @@
 # Rendered by .github/workflows/release-build.yml into suiflex/homebrew-tap.
-# Placeholders (0.46.1, https://github.com/suiflex/rdb/releases/download/v0.46.1, 18bd565e3feb44e32450e3d2321b18ae8c0e5f1abb2b783534347829e7f2d2cb) are filled in via sed on each
+# Placeholders (0.47.0, https://github.com/suiflex/rdb/releases/download/v0.47.0, 3b7d86888a4b7a4064d292c08ee17f4feffb20637ba691a44ca3c82f5d5a30ce) are filled in via sed on each
 # release. Edit the template, not the generated file.
 #
 # The arm64 stanza carries its own placeholder and a trailing marker comment.
@@ -16,7 +16,7 @@
 class Rdb < Formula
   desc "Native cross-platform database manager (PostgreSQL, MySQL, Redis, MongoDB)"
   homepage "https://github.com/suiflex/rdb"
-  version "0.46.1"
+  version "0.47.0"
   license "Apache-2.0"
 
   depends_on :linux
@@ -28,14 +28,14 @@ class Rdb < Formula
   # half missing leaves an arm machine with no url at all, which Homebrew
   # rejects at *load* time ("formula requires at least a URL"), breaking more
   # than just the install.
-  url "https://github.com/suiflex/rdb/releases/download/v0.46.1/rdb-x86_64-unknown-linux-gnu.tar.gz"
-  sha256 "18bd565e3feb44e32450e3d2321b18ae8c0e5f1abb2b783534347829e7f2d2cb"
+  url "https://github.com/suiflex/rdb/releases/download/v0.47.0/rdb-x86_64-unknown-linux-gnu.tar.gz"
+  sha256 "3b7d86888a4b7a4064d292c08ee17f4feffb20637ba691a44ca3c82f5d5a30ce"
 
   # Without this override every Linux user got the x86_64 tarball, so an arm64
   # machine silently installed a binary it cannot run.
   on_arm do
-    url "https://github.com/suiflex/rdb/releases/download/v0.46.1/rdb-aarch64-unknown-linux-gnu.tar.gz"
-    sha256 "5e63f66dd785e2eeb3f143cfc51d0ddf538a58835e767de52bde49d8f8c85a18"
+    url "https://github.com/suiflex/rdb/releases/download/v0.47.0/rdb-aarch64-unknown-linux-gnu.tar.gz"
+    sha256 "80f0454086604050ff35f980afd377d5b10d36bfe6810e5e4db5351cf69903cd"
   end
 
   def install
