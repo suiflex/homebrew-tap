@@ -8,28 +8,28 @@
 class ArsyCode < Formula
   desc "Local, auditable, model-independent software-engineering agent harness"
   homepage "https://github.com/suiflex/arsy-code"
-  version "0.10.0"
+  version "0.11.0"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/suiflex/arsy-code/releases/download/v0.10.0/arsy-macos-aarch64.tar.gz"
-      sha256 "ad430a83008b76d95ccfb8c2d13abc6dafe1b677fe85235ad8ec7d0494b60b03"
+      url "https://github.com/suiflex/arsy-code/releases/download/v0.11.0/arsy-macos-aarch64.tar.gz"
+      sha256 "d6bdece004e5245c7957109de1d25393ff27a7c4348a5ba0cc0b21aa5aa5d1ef"
     end
     on_intel do
-      url "https://github.com/suiflex/arsy-code/releases/download/v0.10.0/arsy-macos-x86_64.tar.gz"
-      sha256 "16ba175f78a7f3826e7fe5c29530ed7ba91c1e7ca040e26323449bb102a53117"
+      url "https://github.com/suiflex/arsy-code/releases/download/v0.11.0/arsy-macos-x86_64.tar.gz"
+      sha256 "b2a2135fd7629aa09535128206a7ba4e57083146beb0dda73499d540e4cf7870"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/suiflex/arsy-code/releases/download/v0.10.0/arsy-linux-aarch64.tar.gz"
-      sha256 "34ea35755d6d3b3e124f6f142820ebbaad6eb8e05e35a705a4c91d89e66cc9a7"
+      url "https://github.com/suiflex/arsy-code/releases/download/v0.11.0/arsy-linux-aarch64.tar.gz"
+      sha256 "a5c82430a3aa245825c8631812426940d8b30d0716560c7b985bd6ac6d3f74f9"
     end
     on_intel do
-      url "https://github.com/suiflex/arsy-code/releases/download/v0.10.0/arsy-linux-x86_64.tar.gz"
-      sha256 "70b4ce3017b4b8f4ee9a5f51e103fcadb3a574f2ee782c389a1d2618bda04f76"
+      url "https://github.com/suiflex/arsy-code/releases/download/v0.11.0/arsy-linux-x86_64.tar.gz"
+      sha256 "d2879eebbe23fa1b92b328a53d39d96ad9e136565ed863796806e37a87a5fc01"
     end
   end
 
