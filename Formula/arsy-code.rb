@@ -8,40 +8,41 @@
 class ArsyCode < Formula
   desc "Local, auditable, model-independent software-engineering agent harness"
   homepage "https://github.com/suiflex/arsy-code"
-  version "0.12.0"
+  version "0.13.1"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/suiflex/arsy-code/releases/download/v0.12.0/arsy-macos-aarch64.tar.gz"
-      sha256 "ef66005e480cd320587455d4cc7ad2b301c44c7546ec45c3f800d9883d7f1109"
+      url "https://github.com/suiflex/arsy-code/releases/download/v0.13.1/arsy-macos-aarch64.tar.gz"
+      sha256 "9b862a0986b184ad6212e7a7019e618bed201f7d60ece948d388bde8fdbe7e7b"
     end
     on_intel do
-      url "https://github.com/suiflex/arsy-code/releases/download/v0.12.0/arsy-macos-x86_64.tar.gz"
-      sha256 "a1e3692bad6841a5437110f9cbf7e0ad25acd77a942e102fc315fb9e942fd63c"
+      url "https://github.com/suiflex/arsy-code/releases/download/v0.13.1/arsy-macos-x86_64.tar.gz"
+      sha256 "8ad85143d9b6697b4083155108b95957c1945f0de00dfeade52ee625681f8580"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/suiflex/arsy-code/releases/download/v0.12.0/arsy-linux-aarch64.tar.gz"
-      sha256 "a385639c560e65a0b453b4e4662ceebe3369c390aac5629f7cf9d126dc888c03"
+      url "https://github.com/suiflex/arsy-code/releases/download/v0.13.1/arsy-linux-aarch64.tar.gz"
+      sha256 "40af464bff152f4a81c469ec71bfa9995df1e7c8b0d14e359bfe5400e6bcbc24"
     end
     on_intel do
-      url "https://github.com/suiflex/arsy-code/releases/download/v0.12.0/arsy-linux-x86_64.tar.gz"
-      sha256 "21b86e3e8fdcd701e2d7ac557590cd756523669800a488185cdf7394a9164167"
+      url "https://github.com/suiflex/arsy-code/releases/download/v0.13.1/arsy-linux-x86_64.tar.gz"
+      sha256 "d4e62a3e584aaa1858d03efd9b3d9c1cfc860faca3bfe9db69283d27f513cd56"
     end
   end
 
   def install
     bin.install "arsy"
-    # Installed together so FluxGuard lands beside arsy, where ARSY looks for
-    # it when it declares the bundled MCP server.
+    # Both bundled helpers must land beside arsy.
     bin.install "fluxguard"
+    bin.install "arsy-sandbox-worker"
   end
 
   test do
     assert_match version.to_s, shell_output("#{bin}/arsy --version")
     assert_predicate bin/"fluxguard", :exist?
+    assert_predicate bin/"arsy-sandbox-worker", :exist?
   end
 end
