@@ -1,26 +1,26 @@
 class Kurir < Formula
   desc "Portable MCP server registration and harness integration toolkit"
   homepage "https://github.com/suiflex/kurir"
-  version "0.6.1"
+  version "0.7.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/suiflex/kurir/releases/download/v#{version}/kurir-#{version}-darwin-aarch64.tar.gz"
-      sha256 "2b924f7435a05f68025fa01d39a17aeb7ca908453c0cfd3ffbce6bd93266599d"
+      sha256 "3d36d587e537447dceabd3811e0302393c8f2b6a460121e6e57ecbb12ff9658e"
     else
       url "https://github.com/suiflex/kurir/releases/download/v#{version}/kurir-#{version}-darwin-x86_64.tar.gz"
-      sha256 "95f222059577875a9fe91698495f924092ecb0cc9bf720d12672c18b0572de08"
+      sha256 "686fae602e2f336828fc3ee16414d8d95a82ac1804d9800dc5442bb74196013b"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/suiflex/kurir/releases/download/v#{version}/kurir-#{version}-linux-aarch64.tar.gz"
-      sha256 "3294fee5e3c0af8d9bbea461959c5476ea00fae00a09b265ccaec9f0f800e03d"
+      sha256 "42206ca88324040cb15c701364c7cf82552f0d328edbee20ea271ee3b78ed9e4"
     else
       url "https://github.com/suiflex/kurir/releases/download/v#{version}/kurir-#{version}-linux-x86_64.tar.gz"
-      sha256 "54cd7c4328d47eca287d8e06620c65f1f5c90246bbb4c312abdd5f7e5626375e"
+      sha256 "79447d07fc42f8ec9bcd9e548ba6535ab526a1b4bf74979994a9283b4f90cb45"
     end
   end
 
